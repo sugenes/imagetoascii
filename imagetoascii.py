@@ -37,7 +37,7 @@ def convertToAscii(image):
 
     return temp
     
-image = cv.imread("D:/Python/ITA/cat.jpg")
+image = cv.imread("/home/user/Python/imagetoascii/cat.jpg")
 #cv.imshow("Old image", image)
 #k = cv.waitKey(0)
 new_image = resizeImage(image)
@@ -46,6 +46,6 @@ grey_image = cv.cvtColor(new_image, cv.COLOR_BGR2GRAY)
 #cv.imshow("New image", new_image)
 #k = cv.waitKey(0)
 converted_image = convertToAscii(grey_image)
-with open("D:/Python/ITA/test.txt", "w", encoding="utf-8") as f:
+with open("/home/user/Python/imagetoascii/test.txt", "w", encoding="utf-8") as f:
        f.write(converted_image)
 print(converted_image)
